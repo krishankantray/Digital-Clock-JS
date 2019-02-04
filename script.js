@@ -17,9 +17,9 @@ if(min.length <2)
     min='0'+min ;
 if(sec.length <2)
     sec='0'+sec ;
-var clock = dayname[day] +' '+ hour + ' : ' + min + ' : ' + sec + ' ' + mer ;
+var clock = dayname[day] +' '+ hour + ' : ' + min + ' : ' + sec + ' ' ;
 document.getElementById('viewdate').innerHTML = clock ;
-    console.log(clock);
+document.getElementById('meridian').innerHTML = mer ;
 }
 //printdate() ;
 setInterval(printdate, 1000) ;
