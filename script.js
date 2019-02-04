@@ -1,6 +1,12 @@
 function printdate() {
 var date = new Date() ;
-var hour = date.getHours() + '';
+var hour = date.getHours() ;
+var mer = 'AM'
+if(hour >12 ){
+    hour = hour-12 ;
+    mer = 'PM' ;
+}
+hour = hour + ''; 
 var min = date.getMinutes() + '';
 var sec = date.getSeconds()+ '';
 var day = date.getDay() ;
@@ -11,7 +17,7 @@ if(min.length <2)
     min='0'+min ;
 if(sec.length <2)
     sec='0'+sec ;
-var clock = dayname[day] +' '+ hour + ' : ' + min + ' : ' + sec ;
+var clock = dayname[day] +' '+ hour + ' : ' + min + ' : ' + sec + ' ' + mer ;
 document.getElementById('viewdate').innerHTML = clock ;
     console.log(clock);
 }
